@@ -32,6 +32,7 @@ Install-Php -Version 5.6 -Architecture x64 -ThreadSafe $true -Path C:\laragon\bi
 Install-Php -Version 7.4 -Architecture x64 -ThreadSafe $true -Path C:\laragon\bin\php\php74 -AddToPath User -TimeZone Asia/Kuala_Lumpur
 Install-Php -Version 8.0 -Architecture x64 -ThreadSafe $true -Path C:\laragon\bin\php\php80 -AddToPath User -TimeZone Asia/Kuala_Lumpur
 Install-Php -Version 8.1 -Architecture x64 -ThreadSafe $true -Path C:\laragon\bin\php\php81 -AddToPath User -TimeZone Asia/Kuala_Lumpur
+Install-Php -Version 8.2 -Architecture x64 -ThreadSafe $true -Path C:\laragon\bin\php\php82 -AddToPath User -TimeZone Asia/Kuala_Lumpur
 ```
 
 **By default it will register all your folder path naming the same as the installation zip file. It will be something like **
@@ -42,6 +43,7 @@ Name | Value
 7.4 | C:\laragon\bin\php\php74
 8.0 | C:\laragon\bin\php\php80
 8.1 | C:\laragon\bin\php\php81
+8.2 | C:\laragon\bin\php\php82
 
 **Set current where PHP symlink to be pointed when we set which version of php need to be use**
 ```Initialize-PhpSwitcher -Alias C:\laragon\bin\php\current -Scope CurrentUser```
@@ -53,9 +55,10 @@ Add-PhpToSwitcher -Name php56 -Path C:\laragon\bin\php\php56
 Add-PhpToSwitcher -Name php74 -Path C:\laragon\bin\php\php74
 Add-PhpToSwitcher -Name php80 -Path C:\laragon\bin\php\php80
 Add-PhpToSwitcher -Name php81 -Path C:\laragon\bin\php\php81
+Add-PhpToSwitcher -Name php82 -Path C:\laragon\bin\php\php82
 ```
 **To switch version manually you like just type:**
-```Switch-Php php74```
+```Switch-Php php82 -Force```
 
 However we are going to combine Laragon UI php switch with 
 
